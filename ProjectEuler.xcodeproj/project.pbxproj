@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A69534B1944399E006C9B94 /* 4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A69534A1944399E006C9B94 /* 4.swift */; };
 		0AF8B92119441FBD00FFAC89 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8B92019441FBD00FFAC89 /* main.swift */; };
+		0AF8B92819441FD400FFAC89 /* 1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8B92719441FD400FFAC89 /* 1.swift */; };
+		0AF8B92A194424D500FFAC89 /* 2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8B929194424D500FFAC89 /* 2.swift */; };
+		0AF8B92C19442E5F00FFAC89 /* 3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8B92B19442E5F00FFAC89 /* 3.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +27,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0A69534A1944399E006C9B94 /* 4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 4.swift; sourceTree = "<group>"; };
 		0AF8B91D19441FBD00FFAC89 /* ProjectEuler */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ProjectEuler; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AF8B92019441FBD00FFAC89 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		0AF8B92719441FD400FFAC89 /* 1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 1.swift; sourceTree = "<group>"; };
+		0AF8B929194424D500FFAC89 /* 2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 2.swift; sourceTree = "<group>"; };
+		0AF8B92B19442E5F00FFAC89 /* 3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 3.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +66,10 @@
 			isa = PBXGroup;
 			children = (
 				0AF8B92019441FBD00FFAC89 /* main.swift */,
+				0AF8B92719441FD400FFAC89 /* 1.swift */,
+				0AF8B929194424D500FFAC89 /* 2.swift */,
+				0AF8B92B19442E5F00FFAC89 /* 3.swift */,
+				0A69534A1944399E006C9B94 /* 4.swift */,
 			);
 			path = ProjectEuler;
 			sourceTree = "<group>";
@@ -118,7 +130,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AF8B92A194424D500FFAC89 /* 2.swift in Sources */,
+				0AF8B92C19442E5F00FFAC89 /* 3.swift in Sources */,
 				0AF8B92119441FBD00FFAC89 /* main.swift in Sources */,
+				0A69534B1944399E006C9B94 /* 4.swift in Sources */,
+				0AF8B92819441FD400FFAC89 /* 1.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,6 +249,7 @@
 				0AF8B92619441FBD00FFAC89 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

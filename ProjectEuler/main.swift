@@ -6,7 +6,19 @@
 //  Copyright (c) 2014 Kevin Conner. All rights reserved.
 //
 
-import Foundation
+// http://projecteuler.net/problem=1 etc.
 
-println("Hello, World!")
+import Cocoa
 
+let problems = [p1, p2, p3, p4]
+
+var problemNumber = problems.count
+
+for problem in problems.reverse() {
+    let dateBefore = NSDate()
+    let result = problem()
+    let duration = NSDate().timeIntervalSinceDate(dateBefore)
+    
+    println("\(problemNumber). \(result), \(duration) seconds)")
+    problemNumber--
+}
