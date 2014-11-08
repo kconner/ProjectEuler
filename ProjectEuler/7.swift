@@ -10,7 +10,7 @@ func p7() -> Int {
     let targetPrimeCount = 10001
     let numbersToConsider = 1 << 17
     
-    var isPrime: Bool[] = []
+    var isPrime: [Bool] = []
     isPrime.extend(Repeat(count: numbersToConsider, repeatedValue: true))
     
     var primeCount = 1

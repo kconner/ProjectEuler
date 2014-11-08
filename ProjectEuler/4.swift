@@ -9,7 +9,7 @@
 import Foundation
 
 func p4() -> Int {
-    let range = 100..999
+    let range = 100...999
     
     var seed = range.endIndex
     
@@ -36,7 +36,7 @@ func p4() -> Int {
         let lower: Int = min(palindrome / 999, 999)
         let upper: Int = Int(sqrt(CDouble(palindrome)))
         
-        for divisor in lower...upper {
+        for divisor in lower..<upper {
             if palindrome % divisor == 0 {
                 let quotient = palindrome / divisor
                 if range.startIndex <= quotient && quotient <= range.endIndex {

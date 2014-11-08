@@ -9,7 +9,7 @@
 func p3() -> Int {
     var dividend = 600851475143
     
-    var primes: Int[] = []
+    var primes: [Int] = []
     
     func isPrime(value: Int) -> Bool {
         for prime in primes {

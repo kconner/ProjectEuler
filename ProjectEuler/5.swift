@@ -15,10 +15,10 @@ func p5() -> Int {
     }
     
     let primes = [2, 3, 5, 7, 11, 13, 17, 19]
-    let powers = [0, 0, 0, 0, 0, 0, 0, 0]
+    var powers = [0, 0, 0, 0, 0, 0, 0, 0]
     
-    for value in 2..20 {
-        for index in primes.startIndex..primes.endIndex {
+    for value in 2...20 {
+        for index in primes.startIndex..<primes.endIndex {
             let prime = primes[index]
             var dividend = value
             var power = 0
