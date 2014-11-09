@@ -9,6 +9,46 @@
 struct BigDecimal: Printable {
     let digits: [Int] // [0] = ones, [1] = tens…
 
+    init(var _ amount: Int) {
+        var digits: [Int] = []
+
+        while amount != 0 {
+            let digit = amount % 10
+            digits.append(digit)
+            amount /= 10
+        }
+
+        self.digits = digits
+    }
+
+    private init(digits: [Int]) {
+        self.digits = digits
+    }
+
+    subscript(index: Int) -> Int {
+        if index < digits.count {
+            return digits[index]
+        } else {
+            return 0
+        }
+    }
+
+    var ones: Int {
+        return self[0]
+    }
+
+    var tens: Int {
+        return self[1]
+    }
+
+    var hundreds: Int {
+        return self[2]
+    }
+
+    var thousands: Int {
+        return self[3]
+    }
+
     var intValue: Int {
         var sum = 0, place = 1
         for digit in digits {
@@ -24,22 +64,6 @@ struct BigDecimal: Printable {
             string.extend(String(digit))
         }
         return string
-    }
-
-    init(var _ amount: Int) {
-        var digits: [Int] = []
-
-        while amount != 0 {
-            let digit = amount % 10
-            digits.append(digit)
-            amount /= 10
-        }
-
-        self.digits = digits
-    }
-
-    private init(digits: [Int]) {
-        self.digits = digits
     }
 
     func multipliedBy(factor: Int) -> BigDecimal {
