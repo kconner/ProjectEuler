@@ -21,7 +21,7 @@ struct BigDecimal: Printable {
         self.digits = digits
     }
 
-    private init(digits: [Int]) {
+    init(digits: [Int]) {
         self.digits = digits
     }
 
