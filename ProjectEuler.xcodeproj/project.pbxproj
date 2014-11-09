@@ -11,6 +11,8 @@
 		0A479E031A0F300D007029A4 /* 19.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A479E021A0F300D007029A4 /* 19.swift */; };
 		0A479E051A0F33A1007029A4 /* 20.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A479E041A0F33A1007029A4 /* 20.swift */; };
 		0A479E071A0F346A007029A4 /* 21.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A479E061A0F346A007029A4 /* 21.swift */; };
+		0A479E0A1A0F36A8007029A4 /* 22.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A479E091A0F36A8007029A4 /* 22.swift */; };
+		0A479E0B1A0F377F007029A4 /* names.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A479E081A0F368D007029A4 /* names.txt */; };
 		0A69534B1944399E006C9B94 /* 4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A69534A1944399E006C9B94 /* 4.swift */; };
 		0A80EA4F194462990034FAA7 /* 5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A80EA4E194462990034FAA7 /* 5.swift */; };
 		0A80EA51194465550034FAA7 /* 6.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A80EA50194465550034FAA7 /* 6.swift */; };
@@ -36,12 +38,13 @@
 /* Begin PBXCopyFilesBuildPhase section */
 		0AF8B91B19441FBD00FFAC89 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 16;
 			files = (
+				0A479E0B1A0F377F007029A4 /* names.txt in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -50,6 +53,8 @@
 		0A479E021A0F300D007029A4 /* 19.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 19.swift; sourceTree = "<group>"; };
 		0A479E041A0F33A1007029A4 /* 20.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 20.swift; sourceTree = "<group>"; };
 		0A479E061A0F346A007029A4 /* 21.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 21.swift; sourceTree = "<group>"; };
+		0A479E081A0F368D007029A4 /* names.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = names.txt; sourceTree = "<group>"; };
+		0A479E091A0F36A8007029A4 /* 22.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 22.swift; sourceTree = "<group>"; };
 		0A69534A1944399E006C9B94 /* 4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 4.swift; sourceTree = "<group>"; };
 		0A80EA4E194462990034FAA7 /* 5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 5.swift; sourceTree = "<group>"; };
 		0A80EA50194465550034FAA7 /* 6.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 6.swift; sourceTree = "<group>"; };
@@ -127,6 +132,8 @@
 				0A479E021A0F300D007029A4 /* 19.swift */,
 				0A479E041A0F33A1007029A4 /* 20.swift */,
 				0A479E061A0F346A007029A4 /* 21.swift */,
+				0A479E081A0F368D007029A4 /* names.txt */,
+				0A479E091A0F36A8007029A4 /* 22.swift */,
 			);
 			path = ProjectEuler;
 			sourceTree = "<group>";
@@ -210,6 +217,7 @@
 				0AF8B92819441FD400FFAC89 /* 1.swift in Sources */,
 				0A8B23231A0EDB3600A73D0A /* 12.swift in Sources */,
 				0A8B232B1A0F129500A73D0A /* PrimeSieve.swift in Sources */,
+				0A479E0A1A0F36A8007029A4 /* 22.swift in Sources */,
 				0AC3E9E91A0F2A1F006B8E48 /* 18.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
