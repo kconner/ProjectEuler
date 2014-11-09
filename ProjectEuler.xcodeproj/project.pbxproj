@@ -15,6 +15,7 @@
 		0A884C271A0EC95B00E37579 /* 11.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A884C261A0EC95B00E37579 /* 11.swift */; };
 		0A8B23231A0EDB3600A73D0A /* 12.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8B23221A0EDB3600A73D0A /* 12.swift */; };
 		0A8B23251A0EE56000A73D0A /* 13.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8B23241A0EE56000A73D0A /* 13.swift */; };
+		0A8B23271A0EE9CC00A73D0A /* 14.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8B23261A0EE9CC00A73D0A /* 14.swift */; };
 		0ADAF2B11A0EB2D500B06718 /* 9.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADAF2B01A0EB2D500B06718 /* 9.swift */; };
 		0AEB204E1944724200237031 /* 8.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEB204D1944724200237031 /* 8.swift */; };
 		0AF8B92119441FBD00FFAC89 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8B92019441FBD00FFAC89 /* main.swift */; };
@@ -44,6 +45,7 @@
 		0A884C261A0EC95B00E37579 /* 11.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 11.swift; sourceTree = "<group>"; };
 		0A8B23221A0EDB3600A73D0A /* 12.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 12.swift; sourceTree = "<group>"; };
 		0A8B23241A0EE56000A73D0A /* 13.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 13.swift; sourceTree = "<group>"; };
+		0A8B23261A0EE9CC00A73D0A /* 14.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 14.swift; sourceTree = "<group>"; };
 		0ADAF2B01A0EB2D500B06718 /* 9.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 9.swift; sourceTree = "<group>"; };
 		0AEB204D1944724200237031 /* 8.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 8.swift; sourceTree = "<group>"; };
 		0AF8B91D19441FBD00FFAC89 /* ProjectEuler */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ProjectEuler; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -97,6 +99,7 @@
 				0A884C261A0EC95B00E37579 /* 11.swift */,
 				0A8B23221A0EDB3600A73D0A /* 12.swift */,
 				0A8B23241A0EE56000A73D0A /* 13.swift */,
+				0A8B23261A0EE9CC00A73D0A /* 14.swift */,
 			);
 			path = ProjectEuler;
 			sourceTree = "<group>";
@@ -165,6 +168,7 @@
 				0ADAF2B11A0EB2D500B06718 /* 9.swift in Sources */,
 				0A884C271A0EC95B00E37579 /* 11.swift in Sources */,
 				0AF8B92C19442E5F00FFAC89 /* 3.swift in Sources */,
+				0A8B23271A0EE9CC00A73D0A /* 14.swift in Sources */,
 				0AF8B92119441FBD00FFAC89 /* main.swift in Sources */,
 				0A80EA4F194462990034FAA7 /* 5.swift in Sources */,
 				0AEB204E1944724200237031 /* 8.swift in Sources */,
