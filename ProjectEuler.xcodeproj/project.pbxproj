@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0A3D72031944671C0035A99A /* 7.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3D72021944671C0035A99A /* 7.swift */; };
 		0A479E031A0F300D007029A4 /* 19.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A479E021A0F300D007029A4 /* 19.swift */; };
+		0A479E051A0F33A1007029A4 /* 20.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A479E041A0F33A1007029A4 /* 20.swift */; };
 		0A69534B1944399E006C9B94 /* 4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A69534A1944399E006C9B94 /* 4.swift */; };
 		0A80EA4F194462990034FAA7 /* 5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A80EA4E194462990034FAA7 /* 5.swift */; };
 		0A80EA51194465550034FAA7 /* 6.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A80EA50194465550034FAA7 /* 6.swift */; };
@@ -46,6 +47,7 @@
 /* Begin PBXFileReference section */
 		0A3D72021944671C0035A99A /* 7.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 7.swift; sourceTree = "<group>"; };
 		0A479E021A0F300D007029A4 /* 19.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 19.swift; sourceTree = "<group>"; };
+		0A479E041A0F33A1007029A4 /* 20.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 20.swift; sourceTree = "<group>"; };
 		0A69534A1944399E006C9B94 /* 4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 4.swift; sourceTree = "<group>"; };
 		0A80EA4E194462990034FAA7 /* 5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 5.swift; sourceTree = "<group>"; };
 		0A80EA50194465550034FAA7 /* 6.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 6.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				0AC3E9E61A0F1FCA006B8E48 /* 17.swift */,
 				0AC3E9E81A0F2A1F006B8E48 /* 18.swift */,
 				0A479E021A0F300D007029A4 /* 19.swift */,
+				0A479E041A0F33A1007029A4 /* 20.swift */,
 			);
 			path = ProjectEuler;
 			sourceTree = "<group>";
@@ -192,6 +195,7 @@
 				0ADAF2B11A0EB2D500B06718 /* 9.swift in Sources */,
 				0A884C271A0EC95B00E37579 /* 11.swift in Sources */,
 				0AF8B92C19442E5F00FFAC89 /* 3.swift in Sources */,
+				0A479E051A0F33A1007029A4 /* 20.swift in Sources */,
 				0A8B23271A0EE9CC00A73D0A /* 14.swift in Sources */,
 				0A8B23291A0EF65C00A73D0A /* 15.swift in Sources */,
 				0AC3E9E51A0F1F0B006B8E48 /* BigDecimal.swift in Sources */,
