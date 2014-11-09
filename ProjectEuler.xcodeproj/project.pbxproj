@@ -27,6 +27,7 @@
 		0AC3E9E51A0F1F0B006B8E48 /* BigDecimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC3E9E41A0F1F0B006B8E48 /* BigDecimal.swift */; };
 		0AC3E9E71A0F1FCA006B8E48 /* 17.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC3E9E61A0F1FCA006B8E48 /* 17.swift */; };
 		0AC3E9E91A0F2A1F006B8E48 /* 18.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC3E9E81A0F2A1F006B8E48 /* 18.swift */; };
+		0AD376731A0FE08200E5ECC0 /* 23.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD376721A0FE08200E5ECC0 /* 23.swift */; };
 		0ADAF2B11A0EB2D500B06718 /* 9.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADAF2B01A0EB2D500B06718 /* 9.swift */; };
 		0AEB204E1944724200237031 /* 8.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEB204D1944724200237031 /* 8.swift */; };
 		0AF8B92119441FBD00FFAC89 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8B92019441FBD00FFAC89 /* main.swift */; };
@@ -69,6 +70,7 @@
 		0AC3E9E41A0F1F0B006B8E48 /* BigDecimal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BigDecimal.swift; sourceTree = "<group>"; };
 		0AC3E9E61A0F1FCA006B8E48 /* 17.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 17.swift; sourceTree = "<group>"; };
 		0AC3E9E81A0F2A1F006B8E48 /* 18.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 18.swift; sourceTree = "<group>"; };
+		0AD376721A0FE08200E5ECC0 /* 23.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 23.swift; sourceTree = "<group>"; };
 		0ADAF2B01A0EB2D500B06718 /* 9.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 9.swift; sourceTree = "<group>"; };
 		0AEB204D1944724200237031 /* 8.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 8.swift; sourceTree = "<group>"; };
 		0AF8B91D19441FBD00FFAC89 /* ProjectEuler */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ProjectEuler; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -134,6 +136,7 @@
 				0A479E061A0F346A007029A4 /* 21.swift */,
 				0A479E081A0F368D007029A4 /* names.txt */,
 				0A479E091A0F36A8007029A4 /* 22.swift */,
+				0AD376721A0FE08200E5ECC0 /* 23.swift */,
 			);
 			path = ProjectEuler;
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AD376731A0FE08200E5ECC0 /* 23.swift in Sources */,
 				0A884C251A0EC0FB00E37579 /* 10.swift in Sources */,
 				0AF8B92A194424D500FFAC89 /* 2.swift in Sources */,
 				0AC3E9E31A0F1716006B8E48 /* 16.swift in Sources */,
