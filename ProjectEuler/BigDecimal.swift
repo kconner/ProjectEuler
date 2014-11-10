@@ -66,13 +66,42 @@ struct BigDecimal: Printable {
         return string
     }
 
+    func addedTo(other: BigDecimal) -> BigDecimal {
+        var longer = self.digits
+        var shorter = other.digits
+        if (longer.count < shorter.count) {
+            (longer, shorter) = (shorter, longer)
+        }
+
+        var digits: [Int] = []
+
+        var carry = 0
+        for i in shorter.startIndex..<shorter.endIndex {
+            var value = longer[i] + shorter[i] + carry
+            digits.append(value % 10)
+            carry = value / 10
+        }
+
+        for i in shorter.endIndex..<longer.endIndex {
+            var value = longer[i] + carry
+            digits.append(value % 10)
+            carry = value / 10
+        }
+
+        while carry != 0 {
+            digits.append(carry % 10)
+            carry /= 10
+        }
+
+        return BigDecimal(digits: digits)
+    }
+
     func multipliedBy(factor: Int) -> BigDecimal {
         var digits = self.digits
 
         var carry = 0
         for var i = digits.startIndex; i < digits.endIndex; ++i {
             let value = digits[i] * factor + carry
-
             digits[i] = value % 10
             carry = value / 10
         }
