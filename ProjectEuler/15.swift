@@ -29,7 +29,7 @@ private func primeFactorsOf(var value: Int) -> [Int] {
 
 class Factorization {
     var factors: [Int]
-    lazy var primeFactors: [Int] = {
+    lazy var primeFactors: [Int] = { [unowned self] in
         var primes: [Int] = []
         self.factors.map { extend(&primes, primeFactorsOf($0)) }
         return primes
