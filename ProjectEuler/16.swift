@@ -8,7 +8,7 @@
 
 func p16() -> Int {
     // Begin at 2^0, then raise to 2^1000
-    var decimal = BigDecimal(1)
+    var decimal = BigInt(1)
 
     for power in 1...1000 {
         decimal = decimal.multipliedBy(2)

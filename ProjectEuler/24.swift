@@ -26,5 +26,5 @@ func p24() -> Int {
         sequenceOffset %= factorial
     }
 
-    return BigDecimal(digits: digits.reverse()).intValue
+    return BigInt(digits: digits.reverse()).intValue
 }

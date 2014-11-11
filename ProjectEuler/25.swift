@@ -8,8 +8,8 @@
 
 func p25() -> Int {
     var terms = (
-        previous: BigDecimal(1),
-        current: BigDecimal(1),
+        previous: BigInt(1),
+        current: BigInt(1),
         index: 2)
 
     while terms.current.digits.count < 1000 {

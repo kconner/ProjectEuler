@@ -1,12 +1,12 @@
 //
-//  BigDecimal.swift
+//  BigInt.swift
 //  ProjectEuler
 //
 //  Created by Kevin Conner on 11/8/14.
 //  Copyright (c) 2014 Kevin Conner. All rights reserved.
 //
 
-struct BigDecimal: Printable {
+struct BigInt: Printable {
     let digits: [Int] // [0] = ones, [1] = tens…
 
     init(var _ amount: Int) {
@@ -66,7 +66,7 @@ struct BigDecimal: Printable {
         return string
     }
 
-    func addedTo(other: BigDecimal) -> BigDecimal {
+    func addedTo(other: BigInt) -> BigInt {
         var longer = self.digits
         var shorter = other.digits
         if (longer.count < shorter.count) {
@@ -93,10 +93,10 @@ struct BigDecimal: Printable {
             carry /= 10
         }
 
-        return BigDecimal(digits: digits)
+        return BigInt(digits: digits)
     }
 
-    func multipliedBy(factor: Int) -> BigDecimal {
+    func multipliedBy(factor: Int) -> BigInt {
         var digits = self.digits
 
         var carry = 0
@@ -111,6 +111,6 @@ struct BigDecimal: Printable {
             carry /= 10
         }
 
-        return BigDecimal(digits: digits)
+        return BigInt(digits: digits)
     }
 }

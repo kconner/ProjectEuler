@@ -7,7 +7,7 @@
 //
 
 func p20() -> Int {
-    var decimal = BigDecimal(1)
+    var decimal = BigInt(1)
     for i in 2...100 {
         decimal = decimal.multipliedBy(i)
     }

@@ -54,7 +54,7 @@ func p17() -> Int {
 
     func unspacedWordsForNumber(number: Int) -> String {
         var words = ""
-        let decimal = BigDecimal(number)
+        let decimal = BigInt(number)
 
         var anyBeforeTens = false
 
