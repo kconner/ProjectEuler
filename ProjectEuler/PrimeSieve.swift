@@ -7,7 +7,7 @@
 //
 
 class PrimeSieve {
-    private var entries: [Bool]
+    private var entries: [Bool] // false if known not to be prime
     private var highestChecked = 1
     let firstPrime = 2
 
@@ -27,6 +27,10 @@ class PrimeSieve {
     }
 
     subscript(natural: Int) -> Bool {
+        if natural < firstPrime {
+            return false
+        }
+
         checkUpTo(natural - 1)
         return entries[natural]
     }
