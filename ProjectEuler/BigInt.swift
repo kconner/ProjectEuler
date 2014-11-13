@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Kevin Conner. All rights reserved.
 //
 
-struct BigInt: Printable {
+struct BigInt: Printable, Comparable {
     let digits: [Int] // [0] = ones, [1] = tens…
 
     init(var _ amount: Int) {
@@ -113,4 +113,32 @@ struct BigInt: Printable {
 
         return BigInt(digits: digits)
     }
+}
+
+// Comparable
+func ==(x: BigInt, y: BigInt) -> Bool {
+    return x.digits == y.digits
+}
+
+func <(x: BigInt, y: BigInt) -> Bool {
+    var xDigits = x.digits
+    var yDigits = y.digits
+    let xOrder = xDigits.count, yOrder = yDigits.count
+
+    if xOrder < yOrder {
+        return true
+    } else if yOrder < xOrder {
+        return false
+    } else {
+        do {
+            let (a, b) = (xDigits.removeLast(), yDigits.removeLast())
+            if a < b {
+                return true
+            } else if b < a {
+                return false
+            }
+        } while 0 < xDigits.count
+    }
+
+    return false
 }
