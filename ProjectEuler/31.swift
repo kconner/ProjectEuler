@@ -7,24 +7,18 @@
 //
 
 private func coinCombinationCount(total: Int, values: Slice<Int>) -> Int {
-    if values.count == 1 {
+    if total < 0 {
+        return 0
+    } else if total == 0 || values.count == 1 {
         return 1 // the one penny coin can always make the remainder one way.
-    }
+    } else {
+        let head = values[0]
+        let tail = values[1..<values.count]
 
-    var sum = 0
-    var value = 0
-    while value < total {
-        let sublist = values[1..<values.count]
-        let combinations = coinCombinationCount(total - value, sublist)
-        sum += combinations
-        value += values[0]
+        return (0 ... total / head).map {
+            coinCombinationCount(total - head * $0, tail)
+        }.reduce(0, +)
     }
-
-    if value == total {
-        ++sum
-    }
-    
-    return sum
 }
 
 func p31() -> Int {
