@@ -20,7 +20,7 @@ func p30() -> Int {
     var sum = 0
 
     var digits: [Int] = [0, 1, 0, 0, 0, 0] // 10
-    var sumOfFifthPowers = digits.map { fifthPowers[$0] }.reduce(0, +)
+    var sumOfFifthPowers = digits.map { fifthPowers[$0] }.reduce(0, combine: +)
 
     for value in 10..<1_000_000 {
         if value == sumOfFifthPowers {

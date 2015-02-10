@@ -17,7 +17,7 @@ private func coinCombinationCount(total: Int, values: Slice<Int>) -> Int {
 
         return (0 ... total / head).map {
             coinCombinationCount(total - head * $0, tail)
-        }.reduce(0, +)
+        }.reduce(0, combine: +)
     }
 }
 

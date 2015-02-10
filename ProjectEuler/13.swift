@@ -133,5 +133,5 @@ func p13() -> Int {
         digits.append(placeDigit)
     }
 
-    return digits.reverse()[0..<10].reduce(0, { $0 * 10 + $1 })
+    return digits.reverse()[0..<10].reduce(0, combine: { $0 * 10 + $1 })
 }

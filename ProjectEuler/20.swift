@@ -12,5 +12,5 @@ func p20() -> Int {
         decimal = decimal.multipliedBy(i)
     }
 
-    return decimal.digits.reduce(0, +)
+    return decimal.digits.reduce(0, combine: +)
 }

@@ -45,7 +45,7 @@ private struct Point {
     
     static func productOfValues(points: [Point]) -> Int {
         let grid = self.grid
-        return points.map { $0.value }.reduce(1, *)
+        return points.map { $0.value }.reduce(1, combine: *)
     }
 
     func stripes() -> [[Point]] {
