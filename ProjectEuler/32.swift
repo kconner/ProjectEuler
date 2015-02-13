@@ -82,33 +82,32 @@ private func unorderedDigitsFromInt(var value: Int) -> [Int] {
 }
 
 func p32() -> Int {
+    let maximumFactor1DigitCount = 2
     let minimumProductDigitCount = 4 // x * yyyy = zzzz
-    let maximumProductDigitCount = 5 // xxx * yy = zzzzz
+    let maximumProductDigitCount = 4 // xxx * yy = zzzzz
 
-    var sum = 0
     let allDigits = Array(1...9)
-
+    var products: Set<Int> = Set()
+    
     // For all possible first factors,
     eachCombination(allDigits) { factor1Digits, unusedDigits in
-        eachPermutation(factor1Digits) { permutationDigits1 in
-            let factor1 = intFromDigits(permutationDigits1)
-            
-            // And all possible second factors given the first,
-            eachCombination(unusedDigits) { factor2Digits, expectedProductDigits in
-                if (minimumProductDigitCount <= expectedProductDigits.count && expectedProductDigits.count <= maximumProductDigitCount) {
-                    eachPermutation(factor2Digits) { permutationDigits2 in
-                        let factor2 = intFromDigits(permutationDigits2)
-                        let expectedProductDigitSet = Set(expectedProductDigits)
-                        
-                        // Require the first factor to be less than the second factor so we don't double-count.
-                        // TODO: or vice versa; pick what's faster.
-                        if (factor1 < factor2) {
+        if factor1Digits.count <= maximumFactor1DigitCount {
+            eachPermutation(factor1Digits) { permutation1 in
+                let factor1 = intFromDigits(permutation1)
+                
+                // And all possible second factors given the first,
+                eachCombination(unusedDigits) { factor2Digits, expectedProductDigits in
+                    if (minimumProductDigitCount <= expectedProductDigits.count && expectedProductDigits.count <= maximumProductDigitCount) {
+                        eachPermutation(factor2Digits) { permutation2 in
+                            let factor2 = intFromDigits(permutation2)
+                            let expectedProductDigitSet = Set(expectedProductDigits)
+                            
                             // If the product's digits are a permutation of the remaining digits, count it.
                             let product = factor1 * factor2
                             let productDigits = unorderedDigitsFromInt(product)
                             if productDigits.count == expectedProductDigitSet.count && Set(productDigits) == expectedProductDigitSet {
-                                println(String(format: "%d * %d = %d", factor1, factor2, product))
-                                sum += product
+                                // println(String(format: "%d * %d = %d", factor1, factor2, product))
+                                products.insert(product)
                             }
                         }
                     }
@@ -117,13 +116,5 @@ func p32() -> Int {
         }
     }
 
-    // … Now implement the above for a generalized list of unique, sorted digits.
-    // Test it with 1-5 and 1-6 until it becomes obviously too slow to use.
-    // Try different methods of bailing out early when it's not possible that a subtree of the search will accumulate any products.
-    // - Largest possible second factor must be larger than first factor
-    // - Largest possible product must be larger than first factor
-    // - Largest possible product must be larger than smallest possible second factor
-    // - Minimum number of product digits = 4? Given 4 digits * 1 digit could be 4 digits
-
-    return sum
+    return reduce(products, 0, +)
 }
