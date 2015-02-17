@@ -59,11 +59,11 @@ struct BigInt: Printable, Comparable {
     }
 
     var description: String {
-        var string = ""
-        for digit in digits.reverse() {
-            string.extend(String(digit))
-        }
-        return string
+        return String(intValue)
+    }
+
+    func reverse() -> BigInt {
+        return BigInt(digits: digits.reverse())
     }
 
     func addedTo(other: BigInt) -> BigInt {
@@ -123,7 +123,8 @@ struct BigInt: Printable, Comparable {
     }
 }
 
-// Comparable
+// MARK: Comparable
+
 func ==(x: BigInt, y: BigInt) -> Bool {
     return x.digits == y.digits
 }
