@@ -19,7 +19,7 @@ class PrimeSieve {
         while highestChecked < limit {
             ++highestChecked
             if entries[highestChecked] {
-                for var multiple = highestChecked * 2; multiple < entries.count; multiple += highestChecked {
+                for multiple in stride(from: highestChecked * 2, to: entries.count, by: highestChecked) {
                     entries[multiple] = false
                 }
             }
