@@ -6,31 +6,13 @@
 //  Copyright (c) 2014 Kevin Conner. All rights reserved.
 //
 
-struct BigInt: Printable, Comparable {
-    let digits: [Int] // [0] = ones, [1] = tens…
-
-    init(var _ amount: Int) {
-        var digits: [Int] = []
-
-        while amount != 0 {
-            let digit = amount % 10
-            digits.append(digit)
-            amount /= 10
-        }
-
-        self.digits = digits
+class BigInt: Digits, Comparable {
+    init(_ amount: Int) {
+        super.init(base: 10, amount: amount)
     }
 
     init(digits: [Int]) {
-        self.digits = digits
-    }
-
-    subscript(index: Int) -> Int {
-        if index < digits.count {
-            return digits[index]
-        } else {
-            return 0
-        }
+        super.init(base: 10, digits: digits)
     }
 
     var ones: Int {
@@ -47,19 +29,6 @@ struct BigInt: Printable, Comparable {
 
     var thousands: Int {
         return self[3]
-    }
-
-    var intValue: Int {
-        var sum = 0, place = 1
-        for digit in digits {
-            sum += digit * place
-            place *= 10
-        }
-        return sum
-    }
-
-    var description: String {
-        return String(intValue)
     }
 
     func reverse() -> BigInt {
@@ -123,11 +92,13 @@ struct BigInt: Printable, Comparable {
     }
 }
 
-// MARK: Comparable
+// MARK: Equatable
 
 func ==(x: BigInt, y: BigInt) -> Bool {
-    return x.digits == y.digits
+    return (x as Digits) == (y as Digits)
 }
+
+// MARK: Comparable
 
 func <(x: BigInt, y: BigInt) -> Bool {
     var xDigits = x.digits

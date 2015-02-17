@@ -6,63 +6,24 @@
 //  Copyright (c) 2015 Kevin Conner. All rights reserved.
 //
 
-struct Bits: Printable, Comparable {
-    let bits: [Bool] // [0] = ones, [1] = twos…
-
+class Bits: Digits {
     init(var _ amount: Int) {
-        var bits: [Bool] = []
+        var digits: [Int] = []
 
         while amount != 0 {
-            let bit = amount & 0x01 != 0
-            bits.append(bit)
+            let digit = amount & 0x01
+            digits.append(digit)
             amount >>= 1
         }
-        
-        self.bits = bits
+
+        super.init(base: 2, digits: digits)
     }
 
-    init(bits: [Bool]) {
-        self.bits = bits
-    }
-
-    subscript(index: Int) -> Bool {
-        if index < bits.count {
-            return bits[index]
-        } else {
-            return false
-        }
-    }
-
-    var intValue: Int {
-        var sum = 0, placeValue = 1
-        for bit in bits {
-            if bit {
-                sum += placeValue
-            }
-            placeValue <<= 1
-        }
-        return sum
-    }
-
-    var description: String {
-        var string = String()
-        for bit in bits.reverse() {
-            string.extend(bit ? "1" : "0")
-        }
-        return string
+    init(digits: [Int]) {
+        super.init(base: 2, digits: digits)
     }
 
     func reverse() -> Bits {
-        return Bits(bits: bits.reverse())
+        return Bits(digits: digits.reverse())
     }
-}
-
-// MARK: Comparable
-
-func ==(x: Bits, y: Bits) -> Bool {
-    return x.bits == y.bits
-}
-
-func <(x: Bits, y: Bits) -> Bool {
-    return x.intValue < y.intValue
 }

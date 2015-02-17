@@ -10,10 +10,10 @@ func p36() -> Int {
     var resultSum = 0
 
     for amount in stride(from: 1, to: 1_000_000, by: 2) {
-        var binary = Bits(amount)
-        if binary == binary.reverse() {
-            var decimal = BigInt(amount)
-            if decimal == decimal.reverse() {
+        var decimal = BigInt(amount)
+        if decimal == decimal.reverse() {
+            var binary = Bits(amount)
+            if binary == binary.reverse() {
                 resultSum += amount
             }
         }
