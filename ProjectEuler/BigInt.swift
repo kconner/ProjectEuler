@@ -113,6 +113,14 @@ struct BigInt: Printable, Comparable {
 
         return BigInt(digits: digits)
     }
+
+    func rotateBy(steps: Int) -> BigInt {
+        var rotatedDigits = digits
+        for _ in 0..<steps {
+            rotatedDigits.insert(rotatedDigits.removeLast(), atIndex: 0)
+        }
+        return BigInt(digits: rotatedDigits)
+    }
 }
 
 // Comparable
