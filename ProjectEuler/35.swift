@@ -12,9 +12,7 @@ func p35() -> Int {
 
     var resultCount = 0
 
-    // TODO: Consider rewriting this iteration as a generator/sequence
-    var prime = 2
-    do {
+    for prime in sieve.primeSequence() {
         var rotation = BigInt(prime)
         var allPrime = true
         for _ in 0..<(rotation.digits.count - 1) {
@@ -28,9 +26,7 @@ func p35() -> Int {
         if allPrime {
             ++resultCount
         }
-
-        prime = sieve.nextPrimeAfter(prime) ?? limit
-    } while prime < limit
+    }
 
     return resultCount
 }
